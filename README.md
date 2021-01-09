@@ -1,9 +1,15 @@
-# Capstone-Project
-Flatiron School Capstone Project 
+# <center> Correlating NGS and State Based Science Standards </center>   
 
+<p align="center">
+  <img width="850" height="100" src="NGSS.png">
+</p>
+ 
+ [](NGSS.png) 
+ 
+#### <center> Capstone Project - The Flatiron School - By Kristen Davis </center>
 
-## Summary:  
-In April of 2013 a collection of rigorous, and internationally benchmarked standards for K-12 science education standards called [Next Generation Science Standards (NGS)](https://www.nextgenscience.org/) were released. These standards were crafted to prepare students to be better decision makers about scientific and technical issues and to apply science to their daily lives.  
+#### Summary:  
+In April of 2013 a collection of rigorous, and internationally benchmarked standards for K-12 science education standards were released called [Next Generation Science Standards (NGS)](https://www.nextgenscience.org/) . These standards were crafted to prepare students to be better decision makers about scientific and technical issues and to apply science to their daily lives.  
 
 By blending core science knowledge with scientific practices, students are engaged in a more relevant context that deepens their understanding and helps them to build what they need to move forward with their education. However these standards were of voluntary adoption at the time and many states chose not to change their current (common core) standards. 
 
