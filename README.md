@@ -1,10 +1,10 @@
 # <center> Correlating NGS and State Based Science Standards </center>   
 
 <p align="center">
-  <img width="850" height="100" src="NGSS.png">
+  <img width="600" height="250" src="/Images/NGSS.png">
 </p>
  
- [](NGSS.png) 
+ [](/Images/NGSS.png) 
  
 #### <center> Capstone Project - The Flatiron School - By Kristen Davis </center>
 
