@@ -1,12 +1,12 @@
-# <center> Correlating NGS and State Based Science Standards </center>   
+# <p align="center"> Correlating NGS and State Based Science Standards <p align="center">
 
 <p align="center">
   <img width="600" height="250" src="/Images/NGSS.png">
-</p>
+<p align="center">
  
  [](/Images/NGSS.png) 
  
-#### <center> Capstone Project - The Flatiron School - By Kristen Davis </center>
+#### <p align="center"> Capstone Project - The Flatiron School - By Kristen Davis <p align="center">
 
 #### Summary:  
 In April of 2013 a collection of rigorous, and internationally benchmarked standards for K-12 science education standards were released called [Next Generation Science Standards (NGS)](https://www.nextgenscience.org/) . These standards were crafted to prepare students to be better decision makers about scientific and technical issues and to apply science to their daily lives.  
