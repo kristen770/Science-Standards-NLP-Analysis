@@ -16,3 +16,6 @@ By blending core science knowledge with scientific practices, students are engag
 While many of the disperate state standards currently used have general alignment with the NGS standards discrepency in sequency or grade level often make it difficult for educators to allign NGS resources to their teaching units. 
 
 This project seeks to use KMeans clustering, NLP, and Neural Networks in conjunction with a Dash to build a tool that allows teachers to easily identify which NGS standards most closely align with their state specific standard and thus effeciently access resources, framework and core ideas for meaningful implementation in the classroom. Additionally this tool could be used by building level, district level, or state level administrators to move standards into alignment with NGS standards. 
+ 
+ 
+ [Blog Post](https://kristendavis27.medium.com/wordcloud-style-guide-2f348a03a7f8)
