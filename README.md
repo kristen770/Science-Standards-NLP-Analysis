@@ -18,3 +18,7 @@ Currently 18 states have adopted the NGS fully for their K -12 science curriculu
  
  
  [Blog Post](https://kristendavis27.medium.com/wordcloud-style-guide-2f348a03a7f8)
+
+
+Sources: 
+[NLP Town](https://github.com/nlptown/nlp-notebooks/blob/master/An%20Introduction%20to%20Word%20Embeddings.ipynb)
