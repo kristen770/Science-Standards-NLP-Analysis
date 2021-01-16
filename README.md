@@ -13,9 +13,8 @@ In April of 2013 a collection of rigorous, and internationally benchmarked stand
 
 By blending core science knowledge with scientific practices, students are engaged in a more relevant context that deepens their understanding and helps them to build what they need to move forward with their education. However these standards were of voluntary adoption at the time and many states chose not to change their current (common core) standards. 
 
-While many of the disperate state standards currently used have general alignment with the NGS standards discrepency in sequency or grade level often make it difficult for educators to allign NGS resources to their teaching units. 
+Currently 18 states have adopted the NGS fully for their K -12 science curriculum, 26 are 'aligned' to the NGS standards and 8 have independently developled standards. 'Alligning with' or 'aligned to' are terms often used by rarely quantified. By identifying word freqencies and text patterns in the NGS standards and comparing them to state standards that claim to be aligned to them, this project aims not only to provide insight into the similarities and differences of science education across America but also develop a tool that could be used more broadly to measure alignment. 
 
-This project seeks to use KMeans clustering, NLP, and Neural Networks in conjunction with a Dash to build a tool that allows teachers to easily identify which NGS standards most closely align with their state specific standard and thus effeciently access resources, framework and core ideas for meaningful implementation in the classroom. Additionally this tool could be used by building level, district level, or state level administrators to move standards into alignment with NGS standards. 
  
  
  [Blog Post](https://kristendavis27.medium.com/wordcloud-style-guide-2f348a03a7f8)
