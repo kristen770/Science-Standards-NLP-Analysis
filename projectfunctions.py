@@ -21,7 +21,7 @@ import json
 import seaborn as sns
 
 
-#Natural Language Processing    
+#Natural Language Processing 
 import nltk
 #nltk.download('stopwords')
 from nltk.corpus import stopwords
@@ -37,13 +37,22 @@ import re
 from os import path
 from PIL import Image
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator 
-import gensim
-
+import gensim 
+from gensim.parsing.preprocessing import preprocess_documents 
+import py_stringmatching as sm 
+from gensim.models import Word2Vec 
+from fuzzywuzzy import fuzz 
+from gensim.models import TfidfModel
+from gensim.corpora import Dictionary
 
 #Modeling 
 from sklearn.cluster import MiniBatchKMeans, KMeans 
-from sklearn.decomposition import PCA 
-from sklearn.metrics import silhouette_score, accuracy_score, calinski_harabasz_score, confusion_matrix, classification_report
+from sklearn.decomposition import PCA  
+
+from sklearn.metrics import silhouette_score, accuracy_score
+from sklearn.metrics import calinski_harabasz_score, confusion_matrix 
+from sklearn.metrics import classification_report 
+
 from sklearn.datasets import fetch_20newsgroups 
 from sklearn.ensemble import RandomForestClassifier, RandomForestRegressor 
 from sklearn.model_selection import train_test_split 
@@ -52,7 +61,8 @@ from sklearn.naive_bayes import MultinomialNB
 from scipy.spatial.distance import pdist, squareform 
 from sklearn.manifold import TSNE 
 from collections import defaultdict 
-from sklearn.pipeline import make_pipeline
+from sklearn.pipeline import make_pipeline 
+from sklearn.feature_extraction.text import TfidfVectorizer 
 
 #load the expanded ngs standards pdf into a txt file
 def pdf_to_text(filepath, filename):  
@@ -196,7 +206,8 @@ def alignment_processing(docname):
     corpus = [dictionary.doc2bow(gen_doc) for gen_doc in gen_docs] 
     return corpus 
 
-def compare_docs(textfile): 
+def compare_docs(textfile):  
+    tf_idf = gensim.models.TfidfModel(ngss_corpus)
     current_doc = []
     with open (textfile) as f:
         tokens = sent_tokenize(f.read())
