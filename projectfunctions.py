@@ -207,7 +207,7 @@ def alignment_processing(docname):
     return corpus 
 
 def compare_docs(textfile):  
-    tf_idf = gensim.models.TfidfModel(ngss_corpus)
+  
     current_doc = []
     with open (textfile) as f:
         tokens = sent_tokenize(f.read())
@@ -217,7 +217,8 @@ def compare_docs(textfile):
     processed_doc = preprocess_documents(current_doc)  
     dictionary_current = gensim.corpora.Dictionary(processed_doc)  
     corpus_current = [dictionary_current.doc2bow(processed_doc) 
-                      for processed_doc in processed_doc] 
+                      for processed_doc in processed_doc]  
+    tf_idf = gensim.models.TfidfModel(ngss_corpus)
             
     current_doc_tf_idf = tf_idf[corpus_current]
     sum_of_sim =(np.sum(sims[current_doc_tf_idf], dtype=np.float32)) 
