@@ -87,12 +87,13 @@ def open_and_flatten(filename):
                       'ls', 'level', 'students', 'ex', 'wyoming', 'iv', 'ii', 'iii', 'hs', 'ls', 'ms', 'https', 
                        'etc', 'ets',  'ess', 'ps', 'inc','rights', 'alabama', 'alaska', 'arizona', 'colorado', 
                        'flordia', 'georgia', 'idaho', 'louisiana', 'mass', 'minnesota', 'mississippi', 
-                       'missouri', 'montana', 'nebraksa', 'northdakota', 'oklahoma', 'southcarolina', 
-                       'southdakota', 'tennessee', 'utah', 'westvirginia', 'wisconsin', 'wyoming', 'curriculum', 
+                       'missouri', 'montana', 'nebraksa', 'northdakota', 'oklahoma', 
+                       'dakota', 'tennessee', 'utah', 'westvirginia', 'wisconsin', 'wyoming', 'curriculum', 
                       'grade', 'science', 'su', 'su', 'table', 'contents', 'back', 'texreg', 'january', 
                       'feburary', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 
-                      'november', 'december', 'high', 'school', 'maine', 'michigan', 'northcarolina', 'ohio', 
-                       'pennsylvania', 'texas', 'virginia', 'ch', 'appendix']
+                      'november', 'december', 'high', 'school', 'maine', 'michigan', 'carolina', 'ohio', 
+                       'pennsylvania', 'texas', 'virginia', 'ch', 'appendix', 'north', 'south', 'va', 'pre', 'grades', 
+                       'dci', 'sep', 'ccc', 'sci', 'sc', 'standard', 'standards']
     joined_file_words_stopped = [word for word in joined_file_words_lowered if word not in stopwords_list] 
     return joined_file_words_stopped
 
@@ -130,7 +131,8 @@ def general_processing(txtfile):
     stopwords_list += list(string.punctuation)
     stopwords_list += ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'Student','Name','School',
                        'The', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
-                       'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'questions', 'science', 'st']
+                       'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'questions', 'science', 'st', 
+                      'page', 'chapter', 'psc', 'document', 'local', 'regional']
     joined_file_words_stopped = [word for word in joined_file_words_lowered if word not in stopwords_list] 
     return joined_file_words_stopped 
 
@@ -192,4 +194,22 @@ def alignment_processing(docname):
     dictionary = gensim.corpora.Dictionary(gen_docs) 
     #create a bag of words 
     corpus = [dictionary.doc2bow(gen_doc) for gen_doc in gen_docs] 
-    return corpus
+    return corpus 
+
+def compare_docs(textfile): 
+    current_doc = []
+    with open (textfile) as f:
+        tokens = sent_tokenize(f.read())
+        for line in tokens:
+            current_doc.append(line) 
+    
+    processed_doc = preprocess_documents(current_doc)  
+    dictionary_current = gensim.corpora.Dictionary(processed_doc)  
+    corpus_current = [dictionary_current.doc2bow(processed_doc) 
+                      for processed_doc in processed_doc] 
+            
+    current_doc_tf_idf = tf_idf[corpus_current]
+    sum_of_sim =(np.sum(sims[current_doc_tf_idf], dtype=np.float32)) 
+    percentage_of_similarity = round(float(sum_of_sim / len(current_doc)))
+    name = state.title() 
+    print("{} Alignment: %{}".format(name, percentage_of_similarity))
