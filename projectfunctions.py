@@ -62,7 +62,34 @@ from scipy.spatial.distance import pdist, squareform
 from sklearn.manifold import TSNE 
 from collections import defaultdict 
 from sklearn.pipeline import make_pipeline 
-from sklearn.feature_extraction.text import TfidfVectorizer 
+from sklearn.feature_extraction.text import TfidfVectorizer  
+
+def graph_high_frequency_words(word_list, index, name):
+
+    x_list = [x[0] for x in word_list[index][1]]
+    y_list = [x[1] for x in word_list[index][1]]
+
+    fig = go.Figure(go.Bar(x=x_list, y=y_list, marker_color='rgb(75, 117, 156)')) 
+
+    fig.update_layout(
+        title=f'Highest Frequency Words in {name}'.title(),
+        xaxis_tickfont_size=14,
+        yaxis=dict(
+            title='Total Number of Uses',
+            titlefont_size=16,
+            tickfont_size=14,
+        ),
+        legend=dict(
+            x=0,
+            y=1.0,
+            bgcolor='rgba(255, 255, 255, 0)',
+            bordercolor='rgba(255, 255, 255, 0)'
+        ),
+        barmode='group',
+        bargap=0.15, # gap between bars of adjacent location coordinates.
+        bargroupgap=0.1)
+
+    fig.show() 
 
 #load the expanded ngs standards pdf into a txt file
 def pdf_to_text(filepath, filename):  
