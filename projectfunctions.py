@@ -72,7 +72,7 @@ def graph_high_frequency_words(word_list, index, name):
     fig = go.Figure(go.Bar(x=x_list, y=y_list, marker_color='rgb(75, 117, 156)')) 
 
     fig.update_layout(
-        title=f'Highest Frequency Words in {name}'.title(),
+        title="Highest Frequency Words",
         xaxis_tickfont_size=14,
         yaxis=dict(
             title='Total Number of Uses',
@@ -130,7 +130,7 @@ def open_and_flatten(filename):
                       'feburary', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 
                       'november', 'december', 'high', 'school', 'maine', 'michigan', 'carolina', 'ohio', 
                        'pennsylvania', 'texas', 'virginia', 'ch', 'appendix', 'north', 'south', 'va', 'pre', 'grades', 
-                       'dci', 'sep', 'ccc', 'sci', 'sc', 'standard', 'standards']
+                       'dci', 'sep', 'ccc', 'sci', 'sc', 'standard', 'standards', 'lst']
     joined_file_words_stopped = [word for word in joined_file_words_lowered if word not in stopwords_list] 
     return joined_file_words_stopped
 
