@@ -58,7 +58,7 @@ The implications of such a tool stretch far beyond state standards and could be 
 The are many more string distance metrics and NLP text comparison techniques that could be explored and add to an alignment score. Specifcially the py.stringmatching library has a plethera of distance measures that could be computed and added (some would need to be done on cloud processing) and deep nlp with neural netword such as [deep siamese test similarity](https://github.com/dhwajraj/deep-siamese-text-similarity) would add further insight into intra text analysis. Finally, the data used was particularly messy, and while extensive cleaning was done more could be applied. 
 
 
- #### Blog Post  
+ #### Blog Post: 
  [Word Cloud Colormap Visualization](https://kristendavis27.medium.com/wordcloud-style-guide-2f348a03a7f8)
 
 
