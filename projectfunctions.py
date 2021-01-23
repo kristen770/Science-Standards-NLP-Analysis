@@ -198,7 +198,7 @@ def word_cloud(word_list):
     Output: a word cloud"""
     unique_string=(" ").join(word_list)
     wordcloud = WordCloud(width = 1000, height = 500, max_font_size=90, max_words=100,
-                      background_color="white", colormap="nipy_spectral").generate(unique_string)
+                      background_color="white", colormap="Blues_r").generate(unique_string)
     plt.figure(figsize=(12,6))
     plt.imshow(wordcloud)
     plt.axis("off")
@@ -267,4 +267,26 @@ def plot_coefficients(classifier, feature_names, top_features=10):
     plt.title('Feature Imporatance') 
     plt.xlabel('Word')
     plt.ylabel('Importance')
-    plt.show()
+    plt.show() 
+    
+#define vectorizer parameters
+def create_matrix(string):
+    tfidf_vectorizer = TfidfVectorizer(max_features=200000, stop_words='english',
+                                 use_idf=True, ngram_range=(1,3))
+
+    tfidf_matrix = tfidf_vectorizer.fit_transform(string)   
+    return tfidf_matrix 
+
+from nltk.stem.snowball import SnowballStemmer
+stemmer = SnowballStemmer("english")
+
+def tokenize_and_stem(text): 
+    # Brandon Rose Function first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token
+    tokens = [word for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)]
+    filtered_tokens = []
+    # filter out any tokens not containing letters (e.g., numeric tokens, raw punctuation)
+    for token in tokens:
+        if re.search('[a-zA-Z]', token):
+            filtered_tokens.append(token)
+    stems = [stemmer.stem(t) for t in filtered_tokens]
+    return stems
