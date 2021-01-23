@@ -66,4 +66,7 @@ The are many more string distance metrics and NLP text comparison techniques tha
 * [NLP Town](https://github.com/nlptown/nlp-notebooks/blob/master/An%20Introduction%20to%20Word%20Embeddings.ipynb) 
 * [Multi Class Text Classification with Scikit Learn](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f) 
 * [Text Classification](http://brandonrose.org/clustering) 
-* [Fuzzy Wuzzy Matching](https://medium.com/@jmcneilkeller/text-matching-with-fuzzywuzzy-6600eb32c530)
+* [Fuzzy Wuzzy Matching](https://medium.com/@jmcneilkeller/text-matching-with-fuzzywuzzy-6600eb32c530) 
+
+#### Slide Deck: 
+[Non Technical Presentation](https://docs.google.com/presentation/d/1ZEddVTqV8INCNWEz4m1Z8AlpPvOfOuxdUc9-AXd3gZ4/edit#slide=id.gb4150ccf36_0_5131)
