@@ -20,7 +20,11 @@ Currently, 18 states have fully adopted the NGSS for their K -12 science curricu
 These documents contain specific langauge about content standards, as well as writing on overaching goals and themes the standards wish to highlight. These documents shed light into not only what content a state's Department of Education deems important but also how it talks (and thus thinks) about itself.  
 
 ### NGSS Standard Exploration & Sentiment Analysis 
-From the processed corpus the most frequently occuring words in the document are: 
+From the processed corpus the most frequently occuring words in the document are:  
+
+
+  <img width="150" height="150" src="/Images/Screen%20Shot%202021-01-23%20at%2010.00.55%20AM.png">
+
  
  
  [Blog Post](https://kristendavis27.medium.com/wordcloud-style-guide-2f348a03a7f8)
