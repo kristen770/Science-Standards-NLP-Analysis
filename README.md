@@ -22,4 +22,5 @@ Currently 18 states have adopted the NGS fully for their K -12 science curriculu
 
 Sources: 
 [NLP Town](https://github.com/nlptown/nlp-notebooks/blob/master/An%20Introduction%20to%20Word%20Embeddings.ipynb) 
-[Multi Class Text Classification with Scikit Learn](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f)
+[Multi Class Text Classification with Scikit Learn](https://towardsdatascience.com/multi-class-text-classification-with-scikit-learn-12f1e60e0a9f) 
+[Text Classification](http://brandonrose.org/clustering)
