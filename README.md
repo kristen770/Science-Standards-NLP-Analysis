@@ -55,7 +55,7 @@ Conversely, the NGSS, a highly regarded organization with a vested interest in m
 The implications of such a tool stretch far beyond state standards and could be applied to any organization seeking to become 'in line with' another organization or philosophy, and for those organizations to better understand the text associated groups are using in association with their name. 
 
 #### Future Work 
-The are many more string distance metrics and NLP text comparison techniques that could be explored and add to an alignment score. Specifcially the py.stringmatching library has a plethera of distance measures that could be computed and added (some would need to be done on cloud processing) and deep nlp with neural netword such as [deep siamese test similarity](https://github.com/dhwajraj/deep-siamese-text-similarity) would add further insight into intra text analysis. Finally, the data used was particularly messy, and while extensive cleaning was done more could be applied. 
+The are many more string distance metrics and NLP text comparison techniques that could be explored and add to an alignment score. Specifcially the py.stringmatching library has a plethera of distance measures that could be computed and added (some would need to be done on cloud processing) and deep nlp with neural netword such as [deep siamese test similarity](https://github.com/dhwajraj/deep-siamese-text-similarity).
 
 
  #### Blog Post: 
