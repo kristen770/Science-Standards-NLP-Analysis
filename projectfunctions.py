@@ -73,24 +73,23 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 ################################################# Data Gathering #################################################################
 
-
 def pdf_to_text(filepath, filename):  
-    """Function to convert pdf to txt file 
+   #Function to convert pdf to txt file 
     
-    Args: 
-        filepath: The local file path for pdf file
-        filename: The name txt file will be saved as 
+    #Args: 
+        #filepath: The local file path for pdf file
+        #filename: The name txt file will be saved as 
         
-    Returns: 
-        File: A txt file  
+    #Returns: 
+        #File: A txt file  
         
-    Examples: 
-        pdf_to_text("\Users\Downloads\SomePDF", "examplefile") 
-        returns the contents of the pdf inside txt file with name as specified 
+    #Examples: 
+        #pdf_to_text("\Users\Downloads\SomePDF", "examplefile") 
+        #returns the contents of the pdf inside txt file with name as specified 
              
-    Required Packages: 
-        pdftotext
-    """
+    #Required Packages: 
+        #pdftotext
+   
     
     #Open PDF file 
     with open(filepath, "rb") as f:
@@ -104,20 +103,19 @@ def pdf_to_text(filepath, filename):
 ############################################## Data Cleaning ##################################################################### 
 
 def open_and_flatten(filename): 
-    """ Takes a txt file and returns a preprocessed file
+    #Takes a txt file and returns a preprocessed file
     
-    Args: 
-        filname: txt file name 
+    #Args: 
+        #filname: txt file name 
     
-    Returns: 
-        A flattened, joined, lowered, tokenized and cleaned(*project specific cleaning applied*) list of strings 
+    #Returns: 
+        #A flattened, joined, lowered, tokenized and cleaned(*project specific cleaning applied*) list of strings 
         
-    Examples:  
-        open_and_flatten('examplefile') **examplefile cointains the following: "This is a text and an example" 
-        returns ["This", "text", "example"] 
-    RequiredPackages: 
-        nltk, nltk stopwords/ nlkt. tokenize: sent_tokenize, word_tokenize, RegexpTokenizer
-    """ 
+    #Examples:  
+        #open_and_flatten('examplefile') **examplefile cointains the following: "This is a text and an example" 
+        #returns ["This", "text", "example"] 
+    #RequiredPackages: 
+        #nltk, nltk stopwords/ nlkt. tokenize: sent_tokenize, word_tokenize, RegexpTokenizer 
     
     #open txt file
     file = open(filename) 
@@ -163,17 +161,17 @@ def open_and_flatten(filename):
 
 
 def graph_high_frequency_words(word_list): #, count, name
-    """Graphs a histogram of the highest freqency words in a text list 
+    #Graphs a histogram of the highest freqency words in a text list 
     
-    Args: 
-    word_list: A list of strings and their frequency counts 
+    #Args: 
+    #word_list: A list of strings and their frequency counts 
     
-    Returns: 
-        Plotly bar graph (histogram) of the word and their frequency 
+    #Returns: 
+        #Plotly bar graph (histogram) of the word and their frequency 
         
-    Required Packages: 
-        Plotly 
-    """
+    #Required Packages: 
+        #Plotly 
+    
     #seperate word and their frequency counts
     x_list = [x[0] for x in word_list[index][1]]
     y_list = [x[1] for x in word_list[index][1]]
@@ -204,22 +202,22 @@ def graph_high_frequency_words(word_list): #, count, name
                 
 
 def bigram_generator(word_list, number_of_pairs):  
-    """Returns a list of bigram pairs of specificed length 
+    #Returns a list of bigram pairs of specificed length 
     
-    Args: 
-        word_list: A list of strings 
-        number_of_pairs: Int 
+    #Args: 
+        #word_list: A list of strings 
+        #number_of_pairs: Int 
         
-    Returns: 
-        A specified number of bigram pairs   
+    #Returns: 
+        #A specified number of bigram pairs   
         
-    Examples: 
-        bigram_generator(example_list, 10) 
-        returns highest raw freqency bigrams from example list 
+    #Examples: 
+        #bigram_generator(example_list, 10) 
+        #returns highest raw freqency bigrams from example list 
     
-    Required Packages: 
-        nltk
-    """
+    #Required Packages: 
+        #nltk
+    
     #calculate bigram pairs
     bigram_measures = nltk.collocations.BigramAssocMeasures() 
     bigram_finder = BigramCollocationFinder.from_words(word_list)  
@@ -230,22 +228,22 @@ def bigram_generator(word_list, number_of_pairs):
 
 
 def pmi_generator(word_list, probability_filter):  
-    """Returns a list of pmi pairs of a specified freqency or above 
+    #Returns a list of pmi pairs of a specified freqency or above 
         
-    Args:  
-        word_list: A list of strings 
-        probability_filter: Int
+    #Args:  
+        #word_list: A list of strings 
+        #probability_filter: Int
            
-    Returns: 
-        A list of paired words and the probability of those words appearing together in the text 
+    #Returns: 
+        #A list of paired words and the probability of those words appearing together in the text 
         
-    Examples: 
-        pmi_generator(example_list, 50) 
-        returns word pairings with a higher than 50% probability of appearing together 
+    #Examples: 
+        #pmi_generator(example_list, 50) 
+        #returns word pairings with a higher than 50% probability of appearing together 
         
-    Required Packages: 
-        nltk
-    """  
+    #Required Packages: 
+        #nltk
+        
     #calcualte pmi pairs
     bigram_measures = nltk.collocations.BigramAssocMeasures() 
     pmi_finder = BigramCollocationFinder.from_words(list_of_words)   
@@ -256,16 +254,16 @@ def pmi_generator(word_list, probability_filter):
     return pmi_scored 
 
 def word_cloud(word_list): 
-    """Generates a preformated WordCloud 
-    Args:
-        word_list: A list of strings 
+    #Generates a preformated WordCloud 
+    #Args:
+        #word_list: A list of strings 
     
-    Returns: 
-        A preformated word cloud 
+    #Returns: 
+        #A preformated word cloud 
         
-    Required Packages: 
-        Wordcloud, Wordcloud: ImageColorGenerator
-    """ 
+    #Required Packages: 
+        #Wordcloud, Wordcloud: ImageColorGenerator
+     
     #join text to single string
     unique_string=(" ").join(word_list) 
     
@@ -284,16 +282,16 @@ def word_cloud(word_list):
 ##################################################### Modeling ###################################################################
 
 def plot_coefficients(classifier, feature_names, top_features=10): 
-    """Plots the most feature importance of specified number positive / negative 
+    #Plots the most feature importance of specified number positive / negative 
     
-    Args: 
-        classifier: classification model 
-        feature_names: list of names of features  
-        top_features: number of features to graph default =10
+    #Args: 
+        #classifier: classification model 
+        #feature_names: list of names of features  
+        #top_features: number of features to graph default =10
         
-    Returns: 
-        A graph of the most postive & negative coefficients with displayed feature name 
-    """ 
+    #Returns: 
+        #A graph of the most postive & negative coefficients with displayed feature name 
+     
     #calculate coefficients 
     coef = classifier.coef_.ravel()
     top_positive_coefficients = np.argsort(coef)[-top_features:]
@@ -315,13 +313,12 @@ def plot_coefficients(classifier, feature_names, top_features=10):
     
 
 def tokenize_and_stem(text): 
-    """Brandon Rose Function first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token 
+    #Brandon Rose Function first tokenize by sentence, then by word to ensure that punctuation is caught as it's own token 
     
-    Args: 
-        text: string 
+    #Args: 
+        #text: string 
     
-    Returns: string tokenized and stemmed
-    """ 
+    #Returns: string tokenized and stemmed
     
     tokens = [word for sent in nltk.sent_tokenize(text) for word in nltk.word_tokenize(sent)]
     filtered_tokens = []
@@ -337,17 +334,17 @@ def tokenize_and_stem(text):
 
 ################################################### String Distances Calculations ################################################
 def jaccard_similarity(list1, list2): 
-    """Calculates the Jaccard Similarity score of two strings 
+    #Calculates the Jaccard Similarity score of two strings 
     
-    Args: 
-        list1/ list2: list of strings 
+    #Args: 
+        #list1/ list2: list of strings 
         
-    Returns: 
-        A distance measurment between two strings 
+    #Returns: 
+        #A distance measurment between two strings 
         
-    Example: 
-        jaccard_similarity(exampleA, exampleB) ****exampleA= "This is an example" / exampleB= "This is too"
-        returns 7.83 - the lower the score the closer the strings are"""
+    #Example: 
+        #jaccard_similarity(exampleA, exampleB) ****exampleA= "This is an example" / exampleB= "This is too"
+        #returns 7.83 - the lower the score the closer the strings are
     intersection = len(list(set(list1).intersection(list2)))
     union = (len(list1) + len(list2)) - intersection
     return float(intersection) / union 
