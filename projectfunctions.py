@@ -160,7 +160,7 @@ def open_and_flatten(filename):
 ########################################### Natural Language Processing #########################################################
 
 
-def graph_high_frequency_words(word_list): #, count, name
+def graph_high_frequency_words(word_list, count, value): #, count, name
     #Graphs a histogram of the highest freqency words in a text list 
     
     #Args: 
@@ -173,8 +173,8 @@ def graph_high_frequency_words(word_list): #, count, name
         #Plotly 
     
     #seperate word and their frequency counts
-    x_list = [x[0] for x in word_list[index][1]]
-    y_list = [x[1] for x in word_list[index][1]]
+    x_list = [x[0] for x in word_list[count][1]]
+    y_list = [x[1] for x in word_list[count][1]]
 
     #graph x_list & y_list
     fig = go.Figure(go.Bar(x=x_list, y=y_list, marker_color='rgb(75, 117, 156)')) 
