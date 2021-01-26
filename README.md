@@ -76,4 +76,4 @@ The are many more string distance metrics and NLP text comparison techniques tha
 * [Fuzzy Wuzzy Matching](https://medium.com/@jmcneilkeller/text-matching-with-fuzzywuzzy-6600eb32c530) 
 
 #### Slide Deck: 
-[Non Technical Presentation](https://docs.google.com/presentation/d/1ZEddVTqV8INCNWEz4m1Z8AlpPvOfOuxdUc9-AXd3gZ4/edit#slide=id.gb4150ccf36_0_5131)
+[Non Technical Presentation](https://docs.google.com/presentation/d/1ZEddVTqV8INCNWEz4m1Z8AlpPvOfOuxdUc9-AXd3gZ4/edit#slide=id.gb44d6929fc_0_368)
