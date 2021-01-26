@@ -246,10 +246,10 @@ def pmi_generator(word_list, probability_filter):
         
     #calcualte pmi pairs
     bigram_measures = nltk.collocations.BigramAssocMeasures() 
-    pmi_finder = BigramCollocationFinder.from_words(list_of_words)   
+    pmi_finder = BigramCollocationFinder.from_words(word_list)   
     
     #apply probability filter 
-    pmi_finder.apply_freq_filter(freq_filter)  
+    pmi_finder.apply_freq_filter(probability_filter)  
     pmi_scored = pmi_finder.score_ngrams(bigram_measures.pmi)  
     return pmi_scored 
 
