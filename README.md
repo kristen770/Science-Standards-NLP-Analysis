@@ -24,17 +24,21 @@ These documents contain specific langauge about content standards, as well as wr
 #### 1. NGSS Standard Exploration & Sentiment Analysis 
 * A full processing and cleaning of the NGSS corpus using custom built pdf to txt functions
 * Word frequency analysis, wordcloud generation, production of bigram and pmi pairs
-* Intra text analysis of the top 5 highest frequency words most highly correlated words and visualizations of the text clusters 
-* Preformed Sum Squares and Calinski Harabaz test to identify k value in KMeans clustering of intra text vocabulary to identify centriod features 
-* Supervised Learning classification of standard preformance statements using cross validation and accuracy to select best fit models 
-* Identification & visulaization of feature importance (content words) for content based classification of standards   
-
-
+* Intra text analysis of the top 5 highest frequency words most highly correlated words and visualizations of the text clusters  
 <p align="center">
-  <img width="500" height="200" src="/Images/Section1.1">
+  <img width="500" height="200" src="/Images/Section1">
 <p align="center">
  
- [](/Images/Section1.1)
+ [](/Images/Section1)
+* Preformed Sum Squares and Calinski Harabaz test to identify k value in KMeans clustering of intra text vocabulary to identify centriod features 
+* Supervised Learning classification of standard preformance statements using cross validation and accuracy to select best fit models 
+* Identification & visulaization of feature importance (content words) for content based classification of standards  
+<p align="center">
+  <img width="500" height="200" src="/Images/Section2">
+<p align="center">
+ 
+ [](/Images/Section2)
+
 
 #### 2. State Standard Exploration & Sentiment Analysis 
 * A full processing and cleaning of each standards corpus using list comprehension and custom built pdf to txt function 
