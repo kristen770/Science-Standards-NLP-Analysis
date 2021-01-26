@@ -1,0 +1,1 @@
+Located in this file are the PDFs for each state's (alligned & non aligned) science standards K12. Most states have a single PDF containing standards for K - 12, other have a single file per grade or group. These are numbered consecutively after the state name.
