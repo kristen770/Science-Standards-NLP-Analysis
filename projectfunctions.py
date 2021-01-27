@@ -49,7 +49,8 @@ import py_stringmatching as sm
 from gensim.models import Word2Vec 
 from fuzzywuzzy import fuzz 
 from gensim.models import TfidfModel
-from gensim.corpora import Dictionary
+from gensim.corpora import Dictionary 
+from nltk.stem.porter import *
 
 #Modeling 
 from sklearn.cluster import MiniBatchKMeans, KMeans 
@@ -326,7 +327,10 @@ def tokenize_and_stem(text):
     for token in tokens:
         if re.search('[a-zA-Z]', token):
             filtered_tokens.append(token) 
-            
+     
+
+    stemmer = PorterStemmer()
+    
     #stem tokenized words 
     stems = [stemmer.stem(t) for t in filtered_tokens]
     return stems
