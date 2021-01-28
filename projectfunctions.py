@@ -351,4 +351,12 @@ def jaccard_similarity(list1, list2):
         #returns 7.83 - the lower the score the closer the strings are
     intersection = len(list(set(list1).intersection(list2)))
     union = (len(list1) + len(list2)) - intersection
-    return float(intersection) / union 
+    return float(intersection) / union  
+
+
+def highlight_max(s):
+    '''
+    highlight the maximum in a Series yellow.
+    '''
+    is_max = s == s.max()
+    return ['background-color: yellow' if v else '' for v in is_max]
