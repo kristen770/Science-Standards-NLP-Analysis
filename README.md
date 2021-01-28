@@ -30,10 +30,6 @@ These documents contain specific langauge about content standards, as well as wr
 * Supervised Learning classification of standard preformance statements using cross validation and accuracy to select best fit models 
 * Identification & visulaization of feature importance (content words) for content based classification of standards   
 
-<p align="center">
-<img src="/Images/Section1" width="425" height="200"/> <img src="/Images/Section2" width="425" height="200"/> 
-<p align="center">
-
 #### 2. State Standard Exploration & Sentiment Analysis 
 * A full processing and cleaning of each standards corpus using list comprehension and custom built pdf to txt function 
 * Word frequency analysis, wordcloud generation, production of bigram and pmi pairs
