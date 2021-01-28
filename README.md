@@ -1,4 +1,5 @@
-# <p align="center"> Correlating NGSS and State Based Science Standards <p align="center">
+# <p align="center"> Correlating NGSS and State Based Science Standards  
+A text based analysis of K-12 standards using NLP, KMeans, Pystringmatching, Fuzzy Wuzzy, Scattertext and Linear SVC models <p align="center">
 
 <p align="center">
   <img width="300" height="150" src="/Images/NGSS.png">
