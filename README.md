@@ -62,13 +62,6 @@ The are many more string distance metrics and NLP text comparison techniques tha
 #### Slide Deck: 
 [Non Technical Presentation](https://docs.google.com/presentation/d/1ZEddVTqV8INCNWEz4m1Z8AlpPvOfOuxdUc9-AXd3gZ4/edit#slide=id.gb44d6929fc_0_368)
 
-#### Technical Visuals: 
-<p align="center">
-  <img width="600" height="400" src="/Images/Screen%20Shot%202021-01-28%20at%204.42.47%20PM.png">
-<p align="center">
- 
- [](/Images/Screen%20Shot%202021-01-28%20at%204.42.47%20PM.png)
-
 #### Blog Post: 
  [Word Cloud Colormap Visualization](https://kristendavis27.medium.com/wordcloud-style-guide-2f348a03a7f8)
 
