@@ -73,5 +73,3 @@ The are many more string distance metrics and NLP text comparison techniques tha
 * [Fuzzy Wuzzy Matching](https://medium.com/@jmcneilkeller/text-matching-with-fuzzywuzzy-6600eb32c530) 
 
 
-
-<a href="file:///Users/kristen/Documents/GitHub/Capstone-Project/AZ_NGSS_Visualization.htmlt">right click </a></td>
