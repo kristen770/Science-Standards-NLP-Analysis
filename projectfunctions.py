@@ -152,7 +152,8 @@ def open_and_flatten(filename):
                       'november', 'december', 'high', 'school', 'maine', 'michigan', 'carolina', 'ohio', 
                        'pennsylvania', 'texas', 'virginia', 'ch', 'appendix', 'north', 'south', 'va', 'pre', 'grades', 
                        'dci', 'sep', 'ccc', 'sci', 'sc', 'standard', 'standards', 'lst', 'questions', 'science', 'st', 
-                      'page', 'chapter', 'psc', 'document', 'local', 'regional'] 
+                      'page', 'chapter', 'psc', 'document', 'local', 'regional', 'whst', 'ature', 'th', 'rst', 'ee', 'rp', 
+                      'sl', 'md', 'mp', 'nrc', 'nbt', 'rl'] 
     
       #join stopped words
     joined_file_words_stopped = [word for word in joined_file_words_lowered if word not in stopwords_list] 
