@@ -41,7 +41,7 @@ These documents contain specific langauge about content standards, as well as wr
 * Used KMeans & hierachical clustering to group inter text relationships and association patterns & generate label for future modeling
 * Applied the Scattertext library to highlight corpus unique words within each state cluster 
 
-#### 4. Qunatify Alignment Between Standards
+#### 4. Quantify Alignment Between Standards
 * Used Gensim modeling to calculate the cosine distance between each text corpus and the NGSS corpus 
 * Applied Word Mover's Distance with Word2Vec to calculate distance between each text corpus and the NGSS corpus  
 * Generated levenshtein distances between each text corpus and the NGSS corpus with the Fuzzy Wuzzy libraries' ratio score
