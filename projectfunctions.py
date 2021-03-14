@@ -184,7 +184,7 @@ def graph_high_frequency_words(word_list, count, value): #, count, name
 
     #style graph 
     fig.update_layout(
-        title="25 Highest Frequency Words",
+        title="Highest Frequency Words",
         xaxis_tickfont_size=10,
         yaxis=dict(
             title='Total Number of Uses',
