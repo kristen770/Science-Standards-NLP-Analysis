@@ -179,12 +179,13 @@ def graph_high_frequency_words(word_list, count, value): #, count, name
     y_list = [x[1] for x in word_list[count][1]]
 
     #graph x_list & y_list
-    fig = go.Figure(go.Bar(x=x_list, y=y_list, marker_color='rgb(75, 117, 156)')) 
+    fig = go.Figure(go.Bar(x=x_list, y=y_list, text=y_list,
+            textposition='auto', marker_color='rgb(75, 117, 156)')) 
 
     #style graph 
     fig.update_layout(
-        title="Highest Frequency Words",
-        xaxis_tickfont_size=14,
+        title="25 Highest Frequency Words",
+        xaxis_tickfont_size=10,
         yaxis=dict(
             title='Total Number of Uses',
             titlefont_size=16,
@@ -198,7 +199,11 @@ def graph_high_frequency_words(word_list, count, value): #, count, name
         ),
         barmode='group',
         bargap=0.15, 
-        bargroupgap=0.1)
+        bargroupgap=0.1) 
+    
+    fig.update_layout(barmode='group', xaxis_tickangle=-45) 
+
+    fig.update_traces(texttemplate='%{text:.2s}', textposition='outside')
 
     fig.show() 
                 
@@ -271,7 +276,7 @@ def word_cloud(word_list):
     
     #make pre formated wordcloud
     wordcloud = WordCloud(width = 1000, height = 500, max_font_size=90, max_words=100,
-                      background_color="white", colormap="Blues_r").generate(unique_string)
+                      background_color="white", colormap="ocean").generate(unique_string)
     plt.figure(figsize=(12,6))
     plt.imshow(wordcloud)
     plt.axis("off")
